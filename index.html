@@ -47081,7 +47081,7 @@ options:{responsive:true,maintainAspectRatio:false,indexAxis:h?'y':'x',plugins:{
 $('fc').onchange=()=>{sucs();render()};
 $('rs').onclick=()=>{build()};
 const dz=$('drop');dz.onclick=e=>{if(e.target.tagName!=='INPUT')$('fi').click()};
-$('fi').onchange=e=>load(e.target.files);
+$('fi').onchange=e=>{const fl=[...e.target.files];e.target.value='';load(fl)};
 dz.ondragover=e=>{e.preventDefault();dz.classList.add('on')};dz.ondragleave=()=>dz.classList.remove('on');
 dz.ondrop=e=>{e.preventDefault();dz.classList.remove('on');load(e.dataTransfer.files)};
 
